@@ -1,0 +1,114 @@
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<div class="container">
+  <div class="row">
+  <table class="table table-hover table-warning">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Field</th>
+        <th>Experience</th>
+        <th>City</th>
+        <th>Address</th>
+        <th>Mobile no</th>
+        <th>Email Id</th>
+        <th>Desciption</th>
+        <th>Status</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let x of emp">
+      <td>{{x.name}}</td>
+      <td>{{x.age}}</td>
+      <td>{{x.field}}</td>
+      <td>{{x.experience}}</td>
+      <td>{{x.city}}</td>
+      <td>{{x.address}}</td>
+      <td>{{x.mobileno}}</td>
+      <td>{{x.emailid}}</td>
+      <td>{{x.description}}</td>
+      <td>{{x.status}}</td>
+      <td  style="color:green"> <a (click)="approve(x.name)">Approve</a></td>
+      <td  style="color:red"> <a (click)="reject(x.name)">Reject</a></td>
+      </tr>
+      </tbody>
+    </table>
+
+
+
+
+  <table class="table table-hover table-success	">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Field</th>
+        <th>Experience</th>
+        <th>City</th>
+        <th>Address</th>
+        <th>Mobile no</th>
+        <th>Email Id</th>
+        <th>Desciption</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let x of old">
+      <td>{{x.name}}</td>
+      <td>{{x.age}}</td>
+      <td>{{x.field}}</td>
+      <td>{{x.experience}}</td>
+      <td>{{x.city}}</td>
+      <td>{{x.address}}</td>
+      <td>{{x.mobileno}}</td>
+      <td>{{x.emailid}}</td>
+      <td>{{x.description}}</td>
+      <td>{{x.status}}</td>
+      </tr>
+      </tbody>
+    </table>
+
+
+
+    <table class="table table-hover table-secondary	">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Field</th>
+          <th>Experience</th>
+          <th>City</th>
+          <th>Address</th>
+          <th>Mobile no</th>
+          <th>Email Id</th>
+          <th>Desciption</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let x of reject1">
+        <td>{{x.name}}</td>
+        <td>{{x.age}}</td>
+        <td>{{x.field}}</td>
+        <td>{{x.experience}}</td>
+        <td>{{x.city}}</td>
+        <td>{{x.address}}</td>
+        <td>{{x.mobileno}}</td>
+        <td>{{x.emailid}}</td>
+        <td>{{x.description}}</td>
+        <td>{{x.status}}</td>
+        </tr>
+        </tbody>
+      </table>
+</div>
+</div>

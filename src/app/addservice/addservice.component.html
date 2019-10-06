@@ -1,0 +1,103 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+
+
+<div class="container">
+
+<div class="card bg-light">
+<article class="card-body mx-auto" style="max-width: 400px;">
+	<h4 class="card-title mt-3 text-center">Create Service</h4>
+	<p class="text-center">Get started with your free account</p>
+
+	<form>
+	<div class="form-group input-group">
+		<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+		 </div>
+        <input name="" class="form-control" placeholder="Full name" type="text" [(ngModel)]="name" [ngModelOptions]="{standalone: true}">
+    </div> <!-- form-group// -->
+		<div class="form-group input-group">
+			<div class="input-group-prepend">
+			    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+			 </div>
+	        <input name="" class="form-control" placeholder="Age" type="text" [(ngModel)]="age" [ngModelOptions]="{standalone: true}">
+	    </div> <!-- form-group// -->
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+		 </div>
+        <input name="" class="form-control" placeholder="Email address" type="email" [(ngModel)]="email" [ngModelOptions]="{standalone: true}">
+    </div> <!-- form-group// -->
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+		</div>
+		<select class="custom-select" style="max-width: 120px;">
+		    <option selected="">+91</option>
+		    <option value="1">+972</option>
+		    <option value="2">+198</option>
+		    <option value="3">+701</option>
+		</select>
+    	<input name="" class="form-control" placeholder="Phone number" type="text"  [(ngModel)]="mobile" [ngModelOptions]="{standalone: true}">
+    </div>
+
+
+		<div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-cogs"></i> </span>
+		</div>
+		<select class="form-control"   >
+	    <option> Select a Service</option>
+	    <option *ngFor="let s of service"  [value]="s.name">{{s.name}}</option>
+	    </select>
+</div>
+
+	<div class="form-group input-group">
+		<div class="input-group-prepend">
+			<span class="input-group-text"> <i class="fa fa-clock-o"></i> </span>
+	</div>
+			<input class="form-control" placeholder="Your Experience (in years)" type="int"  [(ngModel)]="exp" [ngModelOptions]="{standalone: true}">
+	</div> <!-- form-group// -->
+
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-home"></i> </span>
+		</div>
+        <input class="form-control" placeholder="Enter your Address" type="text"  [(ngModel)]="address" [ngModelOptions]="{standalone: true}">
+    </div> <!-- form-group// -->
+		<div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-cogs"></i> </span>
+		</div>
+		<select class="form-control" name="citySelect" [(ngModel)]="city" [ngModelOptions]="{standalone: true}" (change)="onchangecity()">
+			<option> Select a city</option>
+			<option *ngFor="let c of result"  [value]="c.city">{{ c.city }}</option>
+			</select>
+</div>
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fas fa-pen"></i></span>
+	  	</div>
+        <input class="form-control" placeholder="Desciption" type="text" [(ngModel)]="desc" [ngModelOptions]="{standalone: true}">
+    </div> <!-- form-group// -->
+		<div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-home"></i> </span>
+		</div>
+        <input class="form-control" placeholder="Set your Password" type="text"  [(ngModel)]="pass" [ngModelOptions]="{standalone: true}">
+    </div> <!-- form-group// -->
+
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary btn-block" (click)="createService()"> Create Service  </button>
+    </div> <!-- form-group// -->
+</form>
+</article>
+</div> <!-- card.// -->
+
+</div>
+<!--container end.//-->

@@ -1,0 +1,39 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<head><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"/></head>
+<div class="container my-5">
+	<div class="row">
+		 <h1><i class="fa fa-lock" aria-hidden="true"></i> Login</h1>
+
+        </div><br /><br />
+
+
+                	<div class="input-group">
+								<div class="input-group-prepend">
+									<span class="input-group-text"><i class="fas fa-user-tie"></i></span>
+								</div>
+								<input type="text"  [(ngModel)]="uname"   class="form-control" placeholder="username"/>
+							</div><br />
+
+                	<div class="input-group">
+								<div class="input-group-prepend">
+									<span class="input-group-text"><i class="fa fa-key icon"></i></span>
+								</div>
+									<input type="Password" [(ngModel)]="pass"  class="form-control" placeholder="password"/>
+							</div><br />
+            <div class="checkbox">
+              <label><input type="checkbox" (change)="toggleEditable($event)"> Working with us?</label>
+            </div><br />
+              <button type="submit" class="btn btn-success" (click)="check()"><span class="glyphicon glyphicon-off"></span> Login</button>
+
+        <button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-remove"></span>Login with Facebook </button><br />
+               <br /> <div style="border:1px solid black;height:1px;width:300px;align:center"></div><br />
+        <div class="footer">
+
+                  <p>Don't have an Account! <a href="register">Sign Up Here</a></p>
+          <p>Forgot <a href="#">Password?</a></p>
+        </div>
+
+	</div>

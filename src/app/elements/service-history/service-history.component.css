@@ -1,0 +1,9 @@
+.mob {width:400px; margin:20px auto; padding:10px;}
+.history_wrap{width:100%; float:left; height:auto; padding:10px;}
+.history_list{float:left; width:100%; margin:10px 0px; box-shadow:0 0 3px #aaa;}
+.history_item_name{float:left; width:70%; padding:0px 10px; }
+.history_item_name span.item{width:100%;float:left;}
+.history_rate{float:left; width:30%; text-align:right; padding:0 10px;}
+.history_status{float:left; width:100%;border-top:1px solid rgba(0,0,0,0.2);padding:5px 10px;}
+.history_status .label{float:left;}
+.history_total{float:right;}

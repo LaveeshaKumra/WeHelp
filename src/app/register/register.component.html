@@ -1,0 +1,132 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-5">
+      <div class="card cardbox">
+        <div class="card-header">Register</div>
+        <div class="card-body">
+
+          <div class="social-buttons">
+            <a href="#" class="btn btn-md btn-block btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
+            <a href="#" class="btn btn-md btn-block btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
+          </div>
+
+		  <div class="login-or">
+            <hr class="hr-or">
+            <span class="span-or">or</span>
+          </div>
+
+          <div class="form-group">
+
+            <form id="login-nav" method="post" role="form" class="form" accept-charset="UTF-8">
+
+              <div class="form-group">
+                <label class="sr-only">Username</label>
+                <input type="text" [(ngModel)]="uname"  class="form-control" [ngModelOptions]="{standalone: true}"
+                  placeholder="Username" required>
+              </div>
+
+              <div class="form-group">
+
+                <label class="sr-only">Password</label>
+                <div class="input-group">
+                  <input type="password" [(ngModel)]="pass" name="user_password" class="form-control" data-placement="bottom" data-toggle="popover" data-container="body"
+				  data-html="true"   placeholder="Password" required [ngModelOptions]="{standalone: true}">
+
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" id="button-append1" onclick="togglePassword()">
+                      <i class="fa fa-eye" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="progress mt-1" id="reg-password-strength">
+                    <div id="password-strength" class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:0%">
+                    </div>
+                  </div>
+                <div class="help-block text-right">
+                  <small><a href="#">Forgot Password</a></small>
+                  <span id="reg-password-quality" class="hide pull-left block-help">
+                   <small>Password <span id="reg-password-quality-result"></span></small>
+                  </span>
+                </div>
+            <div id="reg_passwordrules" class="hide password-rule mt-2">
+
+                  </div>
+
+              </div>
+
+              <div class="form-group">
+
+                <label class="sr-only">Password Confirm</label>
+                <div class="input-group">
+                  <input type="password" id="reg_userpasswordconfirm" class="form-control" data-placement="bottom"  data-toggle="popover" data-container="body" data-html="true" placeholder="Password Confirm" required>
+
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" id="button-append2" onclick="togglePassword()">
+                      <i class="fa fa-eye" aria-hidden="true"></i>
+                    </button>
+                  </div>
+
+                </div>
+                <div class="help-block text-right">
+                  <small><span id="error-confirmpassword" class="hide pull-right block-help">
+                  <i class="fa fa-info-circle text-danger" aria-hidden="true"></i>Don't match password'</span></small>
+                </div>
+
+              </div>
+
+              <div class="form-group">
+                <label class="sr-only">E-mail Address</label>
+                <input type="email" [(ngModel)]="email" name="user_email" class="form-control" [ngModelOptions]="{standalone: true}"    placeholder="xxx@xxx.com">
+              </div>
+
+              <div class="form-group">
+                <input class="form-control" placeholder="Enter your Address" type="text" [(ngModel)]="address" [ngModelOptions]="{standalone: true}">
+              </div>
+              <div class="form-group">
+                <input class="form-control" placeholder="Enter your city" type="text" [(ngModel)]="city" [ngModelOptions]="{standalone: true}">
+              </div>
+
+              <div class="form-group">
+                	<input name="" class="form-control" placeholder="Phone number" type="text" [(ngModel)]="mobile" [ngModelOptions]="{standalone: true}">
+              </div>
+
+              <div class="form-group">
+                <button id="reg_submit" name="submit"  value="1" class="btn btn-block btn-primary"
+                (click)="createUser()">Create user</button>
+
+                <!-- <mat-form-field>
+                <mat-label>Snack bar duration (seconds)</mat-label>
+                <input type="number" [(ngModel)]="durationInSeconds" matInput>
+              </mat-form-field>
+                <button mat-button id="reg_submit" name="submit"  value="1" class="btn btn-block btn-primary"
+                (click)="createUser()">Create user</button> -->
+                
+                <div id="sign-up-popover" class="hide"><p>is empty</p></div>
+              </div>
+
+              <div class="form-check">
+                <input type="checkbox" id="reg_remember" name="user_remember" class="form-check-input" value="1">
+                <label class="form-check-label">Remember me</label>
+              </div>
+
+            </form>
+          </div>
+
+          <div class="login-or">
+            <hr class="hr-or">
+          </div>
+          <div class="bottom text-center">
+            Are you user? <a href="login"><b>Login</b></a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
