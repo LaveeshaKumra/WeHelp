@@ -20,7 +20,7 @@ export class MainComponent implements OnInit {
       alert(localStorage.getItem('currentUser'));
     }
   }
-
+//check login credentials
 
   
   ngOnInit() {
