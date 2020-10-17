@@ -47,6 +47,7 @@ router.get('/getRejected', (req, res) => {
 	con.query(sql,function(err,rows){
 		if(err) {sendError(err, res);}
 		response.data = rows;
+    console.log(response.data);
     res.json(response);
 	})
 });
@@ -108,6 +109,7 @@ router.post('/checklogin', (req, res) => {
 		else
 		{
 		  console.log("user not found , please try again");
+      res.json("user not found");
 		}
 	});
 });
@@ -129,6 +131,7 @@ router.post('/emplogin', (req, res) => {
 		else
 		{
 		   console.log("user not found , please try again");
+      res.json("user not found");
 		}
 	});
 });
