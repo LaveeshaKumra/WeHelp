@@ -27,7 +27,7 @@ search(){
 book(n,f){
   var  x=localStorage.getItem('currentUser');
   if(x){
-    //alert(x);
+    alert(x);
     this.router.navigate(['/requestPage', n , f]);
   }
   else{
@@ -39,6 +39,7 @@ book(n,f){
 
 }
 ngOnInit() {
+  //get obj id
   this._activatedroute.paramMap.subscribe(params => {
     this.token = params.get("id");
    });
